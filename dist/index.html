@@ -7,7 +7,7 @@
 <link rel="icon" href="./assets/app-icon.svg"><link rel="manifest" href="./manifest.webmanifest"><link rel="apple-touch-icon" href="./assets/app-icon-180.png"><link rel="stylesheet" href="./typography.css">
 <style>
 *{box-sizing:border-box}html,body{margin:0;min-height:100%;font-family:Helvetica,Arial,sans-serif;color:#30160f;background:#f0e5dc}body{min-height:100dvh;display:flex;flex-direction:column;align-items:center;gap:16px;padding:22px 24px 18px}header{text-align:center;flex-shrink:0}h1{font-family:Akony,sans-serif;font-size:17px;font-weight:400;margin:0;letter-spacing:-.7px}header p{margin:8px 0 0;font-size:11px;color:#806b5e;letter-spacing:.4px}.device-holder{position:relative;width:calc(414px * var(--scale,.65));height:calc(910px * var(--scale,.65));flex-shrink:0;margin:auto 0}.device{position:absolute;top:0;left:0;width:414px;height:910px;padding:12px;border-radius:58px;background:#251d1c;box-shadow:inset 0 0 0 2px #7c706a,0 0 0 1px #403531,0 24px 60px #30160f24;transform:scale(var(--scale,.65));transform-origin:top left}.device:before,.device:after{content:'';position:absolute;background:#3b302c;width:4px;border-radius:3px}.device:before{height:65px;left:-4px;top:150px}.device:after{height:92px;right:-4px;top:178px}.screen{width:390px;height:886px;border-radius:46px;background:#fcf8f4;overflow:hidden;display:flex;flex-direction:column}.status-bar{height:30px;flex-shrink:0;position:relative;background:#fcf8f4}.notch{position:absolute;top:5px;left:50%;transform:translateX(-50%);width:105px;height:23px;border-radius:30px;background:#171313}.notch:after{content:'';position:absolute;right:12px;top:8px;width:7px;height:7px;background:#29313b;border:1px solid #3a414b;border-radius:50%}iframe{display:block;border:0;width:390px;height:844px;flex-shrink:0;background:#fcf8f4}.home-bar{height:12px;flex-shrink:0;background:#fcf8f4;display:grid;place-items:center}.home-bar:after{content:'';width:112px;height:4px;background:#2a211d;border-radius:4px}footer{font-size:11px;color:#806b5e;text-align:center;line-height:1.7;flex-shrink:0}footer a{color:#54110f;text-underline-offset:3px}footer span{margin-right:12px}.direct-link{display:none}
-@media(max-width:699px),(hover:none),(pointer:coarse){body{padding:25px;background:#fcf8f4}.device-holder,header,footer{display:none}.direct-link{display:block;margin:auto;color:#54110f}}
+@media(max-width:539px),(hover:none),(pointer:coarse){body{padding:25px;background:#fcf8f4}.device-holder,header,footer{display:none}.direct-link{display:block;margin:auto;color:#54110f}}
 </style></head>
 <body>
 <header><h1>MEET ME FOR DESSERT</h1><p>× PINSKIY & CO · Мобильный прототип</p></header>
@@ -15,7 +15,7 @@
 <footer><span>Прокручивайте экран внутри телефона</span><a href="./app.html">Открыть без рамки ↗</a></footer>
 <a class="direct-link" href="./app.html">Открыть мобильное приложение →</a>
 <script>
-const desktop=matchMedia('(min-width: 700px) and (hover: hover) and (pointer: fine)');
+const desktop=matchMedia('(min-width: 540px) and (hover: hover) and (pointer: fine)');
 function layout(){
  if(!desktop.matches){location.replace('./app.html'+location.search+location.hash);return;}
  const scale=Math.max(.2,Math.min(1,(innerHeight-128)/910,(innerWidth-56)/414));
