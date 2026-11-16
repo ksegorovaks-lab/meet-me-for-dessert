@@ -1,0 +1,61 @@
+@font-face {
+  font-family: "Akony";
+  src: url("./fonts/AKONY.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Astrum Cyrillic";
+  src: url("./fonts/AstrumScriptCyrillic_Light.woff2") format("woff2");
+  font-style: italic;
+  font-weight: 300;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Astrum Cyrillic";
+  src: url("./fonts/AstrumScriptCyrillic_Regular.woff2") format("woff2");
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Astrum Cyrillic";
+  src: url("./fonts/AstrumScriptCyrillic_Bold.woff2") format("woff2");
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+}
+
+:root {
+  --font-display: "Akony", sans-serif;
+  --font-script: "Astrum Cyrillic", cursive;
+  --font-body: Helvetica, "Helvetica Neue", Arial, sans-serif;
+}
+
+body {
+  font-family: var(--font-body);
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+.brand-meet-me {
+  font-family: var(--font-display);
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.brand-for-dessert,
+.brand-tagline {
+  font-family: var(--font-script);
+  font-style: italic;
+  font-weight: 300;
+}
