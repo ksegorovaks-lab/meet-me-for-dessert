@@ -1,0 +1,8 @@
+{
+  "appId": "com.meetmefordessert.app",
+  "appName": "Meet me for Dessert",
+  "webDir": "dist",
+  "backgroundColor": "#fcf8f4",
+  "ios": { "contentInset": "never", "backgroundColor": "#fcf8f4" },
+  "android": { "backgroundColor": "#fcf8f4" }
+}
