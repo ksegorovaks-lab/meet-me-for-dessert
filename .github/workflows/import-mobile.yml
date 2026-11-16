@@ -1,0 +1,32 @@
+name: Import mobile projects
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/import-mobile.yml']
+permissions:
+  contents: write
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Restore iOS and Android source projects
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          from zipfile import ZipFile
+          with ZipFile('mobile-projects.zip') as archive:
+              for entry in archive.infolist():
+                  p = Path(entry.filename)
+                  if p.is_absolute() or '..' in p.parts or p.parts[0] not in ('ios', 'android'):
+                      raise ValueError('Unexpected archive path')
+              archive.extractall('.')
+          PY
+          chmod +x android/gradlew
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add ios android
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'Import complete iOS and Android projects'
+          git push origin HEAD:main
