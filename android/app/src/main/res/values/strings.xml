@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Meet me for Dessert</string>
+    <string name="title_activity_main">Meet me for Dessert</string>
+    <string name="package_name">com.meetmefordessert.app</string>
+    <string name="custom_url_scheme">com.meetmefordessert.app</string>
+</resources>
