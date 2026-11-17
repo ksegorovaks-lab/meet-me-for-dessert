@@ -21,7 +21,7 @@ function layout(){
  const scale=Math.max(.2,Math.min(1,(innerHeight-128)/910,(innerWidth-56)/414));
  document.documentElement.style.setProperty('--scale',scale);
  const frame=document.querySelector('[data-app-frame]');
- if(!frame.hasAttribute('src'))frame.src='./app.html';
+ if(!frame.hasAttribute('src'))frame.src='./app.html?v=3';
 }
 layout();addEventListener('resize',layout);
 </script></body></html>
