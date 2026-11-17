@@ -1,4 +1,13 @@
 /* One application shell for phones, foldables and tablets. */
+.conversation-row>img{flex:0 0 66px;width:66px;height:66px;aspect-ratio:1;object-fit:cover}
+.conversation-row>div{flex:1 1 0;min-width:0}
+.conversation-row strong{display:block;overflow-wrap:anywhere}
+.conversation-row p{max-width:none;white-space:normal;overflow-wrap:anywhere;line-height:1.6}
+.conversation-row>svg{flex-shrink:0}
+.profile-avatar-edit>.large-avatar{flex:0 0 78px;width:78px;height:78px;aspect-ratio:1}
+.profile-avatar-edit>div:last-child{flex:1 1 0;min-width:0}
+.profile-avatar-edit h2{overflow-wrap:anywhere;line-height:1.3}
+@media(max-width:743px){.conversation-row{padding:18px;gap:12px}.conversation-row>img{flex-basis:56px;width:56px;height:56px}.conversation-row strong{font-size:15px}.conversation-row p{font-size:12px}.profile-avatar-edit{gap:16px}}
 .offer-modal{background:var(--pink);text-align:center;padding-top:35px}.offer-modal .eyebrow{font-size:8px;letter-spacing:1px;padding-right:18px}.offer-heart{width:115px;height:100px;object-fit:contain;margin:12px auto 6px}.offer-kicker{font-size:10px;margin:8px 0;color:#75423c}.offer-modal h2{font-size:29px;line-height:1.15;margin:9px 0}.offer-script{font-family:var(--font-script);font-style:italic;font-weight:300;font-size:38px;line-height:1.2;margin-bottom:20px}.offer-discount{display:flex;align-items:center;justify-content:center;gap:16px;background:var(--cream);border:1px dashed #b87b74;border-radius:16px;padding:18px;margin-bottom:20px}.offer-discount strong{font-size:43px;font-weight:400;letter-spacing:-2px;white-space:nowrap}.offer-discount span{text-align:left;font-size:13px;line-height:1.6;max-width:180px}.offer-table{display:flex;text-align:left;gap:12px}.offer-table>svg{margin-top:2px;width:21px;height:21px}.offer-table h3{font-size:14px;font-weight:500;line-height:1.5;margin-bottom:7px}.offer-table p{font-size:12px;line-height:1.8;color:#6d4139}.offer-where{font-size:10px;line-height:1.7;display:flex;align-items:flex-start;justify-content:center;gap:6px;margin:20px 0}.offer-where svg{width:14px;height:14px;margin-top:2px}.offer-booking{display:inline-flex;min-height:44px;align-items:center;font-size:11px;text-underline-offset:4px;margin-top:6px}.offer-demo{font-size:9px;line-height:1.7;color:#73493f;margin-top:6px}.demo-accept{width:auto;margin:0;border-color:#bba08d;padding:12px 17px;display:flex;gap:9px;align-items:center}.demo-accept svg{width:16px;height:16px}
 html{min-height:100%;background:#efe4db;scroll-padding-top:100px}
 body{min-width:320px;min-height:100dvh;overscroll-behavior-y:none;background:var(--paper)}
